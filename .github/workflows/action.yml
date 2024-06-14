@@ -8,13 +8,12 @@ permissions:
       id-token: write
       contents: read
       pull-requests: write
-
 env:
   TF_LOG: INFO
   AWS_REGION: ${{ secrets.AWS_REGION }}
 jobs:
    deploy:
-     runs-on: ubuntu-latest
+     runs-on: windows-latest
      defaults:
        run:
          shell: bash
